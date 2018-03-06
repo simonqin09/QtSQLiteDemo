@@ -1,0 +1,11 @@
+[Unit]
+Description=Qt demo application on framebuffer
+After=multi-user.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/qtdemo_x11.sh start
+ExecStop=/usr/bin/qtdemo_x11.sh stop
+
+[Install]
+WantedBy=multi-user.target
